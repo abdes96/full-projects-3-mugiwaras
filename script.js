@@ -14,7 +14,7 @@ function setup() {
     "Stay updated on our exhibitions",
   ];
   const images = ["06032016-DSC_5246.jpg", "museum2.jpg", "museum3.jpg"];
-  document.getElementById("buttonSkip").addEventListener("click", () => {
+  document.getElementById("buttonNext").addEventListener("click", () => {
     clickCount++;
     //images//
     imageIndex = (imageIndex + 1) % images.length;
@@ -29,9 +29,10 @@ function setup() {
     text.textContent = texts[imageIndex];
 
     // next page
-    if (clickCount % 2 === 0) {
+    if (clickCount % 3  == 0) {
+      if (prevRound) prevRound.style.backgroundColor = "rgba(44,44,44,0.5)";
+
       console.log("nextpage");
-      location.href = "https://www.example.com";
 
     }
   });
