@@ -31,6 +31,8 @@ function setup() {
     // next page
     if (clickCount % 2 === 0) {
       console.log("nextpage");
+      location.href = "https://www.example.com";
+
     }
   });
 }
